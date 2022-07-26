@@ -1,2 +1,4 @@
 # MessageProject
-Spring Boot Project to share messages among users
+- Technology: Spring Boot Framework, Spring Security
+- Database: PostgreSQL
+- Data Access: Hibernate
