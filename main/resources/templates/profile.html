@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweater</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div th:insert="fragments/header::header"></div>
+<div class="container mt-5">
+    <div>
+        <h3 class="text-center">Edit profile</h3>
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Username:</label>
+                <input type="text" class="form-control" name="username" th:value="${user.username}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email: </label>
+                <input type="email" class="form-control" name="email" th:value="${user.email}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <input type="password" class="form-control" name="password" placeholder="New password">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
